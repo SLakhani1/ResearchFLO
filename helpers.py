@@ -1,4 +1,5 @@
-import boto3, botocore
+import boto3
+import botocore
 from config import S3_KEY, S3_SECRET, S3_BUCKET
 from flask import session
 
@@ -8,5 +9,6 @@ s3 = boto3.client(
    aws_secret_access_key=S3_SECRET
 )
 
+
 def download_f(filename):
-	return redirect('https://s3.amazonaws.com/'+'zappa-jepozm5pw'+'/'+filename+'_'+session['email']+'.doc')
+    return redirect('https://s3.amazonaws.com/'+'zappa-jepozm5pw'+'/'+filename+'_'+session['email']+'.doc')

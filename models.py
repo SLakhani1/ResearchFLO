@@ -8,11 +8,13 @@ app.config['MONGOALCHEMY_CONNECTION_STRING'] = 'mongodb://admin:freeflow@ds13576
 
 db = MongoAlchemy(app)
 
+
 class User(db.Document):
     name = db.StringField()
     email = db.StringField()
     password = db.StringField()
     type = db.StringField()
+
 
 class Journal(db.Document):
     title = db.StringField()
@@ -21,6 +23,7 @@ class Journal(db.Document):
     status = db.StringField()
     filename = db.StringField()
     date = db.DateTimeField()
+
 
 class Comments(db.Document):
     user = db.StringField()
