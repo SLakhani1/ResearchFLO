@@ -22,7 +22,7 @@ class RegisterForm(Form):
     )
     type = SelectField(
         'Select Type',
-        choices=[('sub', 'Subscriber'), ('rev', 'Reviewer'), ('pub', 'publisher')]
+        choices=[('sub','Subscriber'),('rev','Reviewer'),('pub','publisher')]
     )
 
 
@@ -35,7 +35,6 @@ class ForgotForm(Form):
     email = TextField(
         'Email', validators=[DataRequired(), Length(min=6, max=40)]
     )
-
 
 class ResetForm(Form):
     password = TextField(
